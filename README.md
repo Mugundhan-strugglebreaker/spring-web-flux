@@ -52,3 +52,19 @@ Testing Framework:
 * Focuses on HTTP request-response interactions.
 
 `@RunWith(SpringRunner.class)` is a JUnit 4 annotation used to integrate Spring TestContext Framework with JUnit, enabling loading of the Spring application context and providing Spring features like dependency injection during tests.
+
+
+Functional Web
+	Use Functions to route the request and response.
+	RouterFunction and Handler Function
+
+RouterFunction
+	Use to route the incoming request
+	Similar to the functionality of @RequestMapping annotation
+
+HandlerFunction
+	Handles the request and response
+	ServerRequest and ServerResponse
+
+	ServerRequest represents the HttpRequests
+	ServerResponse represents the HttpResponse
