@@ -99,4 +99,19 @@ public class FluxAndMonoControllerTest {
 
 
     }
+
+    @Test
+    public void returnMono(){
+
+        StepVerifier.create(webTestClient.get().uri("/mono")
+                .accept(MediaType.APPLICATION_JSON_UTF8)
+                .exchange()
+                .expectStatus().isOk()
+                .returnResult(Integer.class)
+                .getResponseBody()).expectSubscription()
+                .expectNext(1)
+                .verifyComplete();
+
+
+    }
 }
